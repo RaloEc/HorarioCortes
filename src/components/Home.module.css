@@ -1,0 +1,233 @@
+/* Home.css */
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 80vw;
+  padding: 20px;
+  background-color: #0e0e0e;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 20px rgba(4, 73, 137, 0.2); */
+  height: auto;
+  transition: height 5s ease; /* Suaviza el cambio de altura */
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Títulos */
+h1,
+h2 {
+  color: #e9f2f9; /* Dorado para dar un aspecto energético */
+  text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #f80202;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+
+  gap: 10px;
+  width: auto;
+}
+
+input[type="text"],
+select {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+  margin: auto;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #3a89c9;
+  outline: none;
+}
+
+button {
+  background-color: #1b325f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1b325f;
+}
+
+/* Información de notificación */
+.notificacion-info {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 5px solid #05d1ff;
+}
+
+.notificacion-info p {
+  font-size: 1em;
+  color: #e0e0e0;
+  margin: 5px 0;
+}
+
+.notificacion-info strong {
+  color: #3a89c9;
+}
+
+/* Tarjetas de detalles de planificación */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #222;
+  color: #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0px 4px 15px rgba(0, 200, 255, 0.1);
+  border-top: 4px solid #05d1ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px #3a89c970;
+}
+
+.card h2 {
+  font-size: 1.1em;
+  color: #3a89c9;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #b0b0b0;
+}
+
+.card strong {
+  color: #9cc4e4;
+}
+
+.detalle {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.detalle:first-of-type {
+  border-top: none;
+}
+
+.proximo-corte {
+  border: 2px solid #9cc4e4; /* Cambia el color al que prefieras */
+  background-color: rgba(0, 162, 255, 0.1);
+}
+
+.animate {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.hora-actual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.hora-actual p {
+  gap: 0;
+  margin: 0;
+}
+
+/* Oculta el select en móviles y muestra los botones */
+.selectDesktopOnly {
+  display: block;
+}
+
+.mobileButtonsContainer {
+  display: none;
+  gap: 8px;
+}
+
+/* Estilos para los botones en móviles */
+.mobileButtonsContainer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a89c9;
+  color: white;
+  cursor: pointer;
+}
+
+.mobileButtonsContainer button.active {
+  background-color: #1b325f;
+}
+
+@media (max-width: 768px) {
+  .selectDesktopOnly {
+    display: none;
+  }
+  .mobileButtonsContainer {
+    display: flex;
+  }
+
+  .container {
+    width: auto;
+    background-color: #0e0e0e;
+  }
+
+.form{
+  flex-direction: column;
+}
+}
